@@ -3,15 +3,18 @@ var app = {
 
     googleapi: null,
 
+    render: null,
+
     // Application Constructor
-    initialize: function(googleapi) {
+    initialize: function(googleapi, render) {
         this.bindEvents();
         this.googleapi = googleapi;
+        this.render = render;
     },
 
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.getElementById('search').addEventListener('click', this.search, false);
+        document.getElementById('search').addEventListener('click', this.search.bind(this), false);
     },
 
     onDeviceReady: function() {
@@ -24,8 +27,8 @@ var app = {
 
     search: function () {
         var isbn = document.getElementById('isbn').value;
-        googleapi.searchByIsbn(isbn, render.renderResult);
+        this.googleapi.searchByIsbn(isbn, this.render.renderResult);
     }
 };
 
-app.initialize(googleapi);
+app.initialize(googleapi, render);
