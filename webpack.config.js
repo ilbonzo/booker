@@ -8,5 +8,5 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.join(__dirname, 'www/js'),
     },
-    // devtool: 'source-map'
+    devtool: 'source-map'
 };
