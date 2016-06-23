@@ -1,4 +1,4 @@
-var barcodeScanner = {
+module.exports = {
 
     scan: function (callback, render) {
         cordova.plugins.barcodeScanner.scan(

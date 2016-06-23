@@ -1,5 +1,4 @@
-
-var app = {
+module.exports = {
 
     googleapi: null,
 
@@ -16,14 +15,14 @@ var app = {
     },
 
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         document.getElementById('search').addEventListener('click', this.search.bind(this), false);
         document.getElementById('scan').addEventListener('click', this.scan.bind(this), false);
 
     },
 
     onDeviceReady: function() {
-        app.receivedEvent();
+        this.receivedEvent();
     },
 
     receivedEvent: function() {
@@ -40,4 +39,3 @@ var app = {
     }
 };
 
-app.initialize(googleapi, render, barcodeScanner);

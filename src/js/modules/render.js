@@ -1,4 +1,4 @@
-var render = {
+module.exports = {
 
     renderResult: function(result) {
         var resultEl = document.getElementById('search-result');

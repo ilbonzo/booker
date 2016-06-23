@@ -1,4 +1,4 @@
-var googleapi = {
+module.exports = {
 
     searchByIsbn: function(isbn, callback) {
         var request = new XMLHttpRequest();
