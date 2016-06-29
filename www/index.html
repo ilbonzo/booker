@@ -33,7 +33,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="dist/style.bundle.css">
         <title>Hello World</title>
     </head>
     <body>
@@ -46,17 +46,30 @@
                         <label for="isbn">Isbn:</label>
                         <input type="text" id="isbn" />
                     </div>
-                    <div class="button">
-                        <input type="button" value="search" id="search">
+                    <div>
+                        <!-- <input type="button" value="search" id="search"> -->
+
+                        <a class="btn btn-default" id="search" href="#">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            search
+                        </a>
                     </div>
                 </form>
 
                 <div>
-                    <input type="button" value="scan" id="scan">
+                    <a class="btn btn-default" id="scan" href="#">
+                        <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+                        scan
+                    </a>
+                    <!-- <input type="button" value="scan" id="scan"> -->
                 </div>
 
                 <div>
-                    <input type="button" value="get places" id="get-places">
+                    <a class="btn btn-default" id="get-places" href="#">
+                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    get places
+                    </a>
+                    <!-- <input type="button" value="get places" id="get-places"> -->
                 </div>
             </div>
 
@@ -69,7 +82,7 @@
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-        <script type="text/javascript" src="js/index.bundle.js"></script>
+        <script type="text/javascript" src="dist/index.bundle.js"></script>
 
     </body>
 </html>

@@ -17,7 +17,16 @@
   },
   "homepage": "https://github.com/ilbonzo/booker#readme",
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "jquery": "^3.0.0",
     "localforage": "^1.4.2"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
   }
 }

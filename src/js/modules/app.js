@@ -31,16 +31,19 @@ module.exports = {
         console.log('Received Event: deviceready');
     },
 
-    search: function () {
+    search: function (event) {
+        event.preventDefault();
         var isbn = document.getElementById('isbn').value;
         this.googleBooksApi.searchByIsbn(isbn, this.render.renderResult);
     },
 
-    scan: function () {
+    scan: function (event) {
+        event.preventDefault();
         this.barcodeScanner.scan(this.googleBooksApi.searchByIsbn, this.render.renderResult);
     },
 
-    getPlaces: function () {
+    getPlaces: function (event) {
+        event.preventDefault();
         geolocation.location();
     }
 };
