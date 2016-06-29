@@ -1,6 +1,6 @@
 module.exports = {
 
-    renderResult: function(result) {
+    renderResult: function (result) {
         var resultEl = document.getElementById('search-result');
         resultEl.innerHTML = '<strong>wait</strong>';
         if (parseInt(result.totalItems) === 1) {

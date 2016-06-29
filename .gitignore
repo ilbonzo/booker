@@ -41,6 +41,7 @@ node_modules
 platforms/
 plugins/
 
-
 www/js/*.map
+www/js/*.bundle.js
+
 

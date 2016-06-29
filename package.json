@@ -1,0 +1,22 @@
+{
+  "name": "booker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilbonzo/booker.git"
+  },
+  "author": "Matteo Magni <matteo@magni.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilbonzo/booker/issues"
+  },
+  "homepage": "https://github.com/ilbonzo/booker#readme",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}

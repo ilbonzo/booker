@@ -1,15 +1,17 @@
+var geolocation = require('./geolocation');
+
 module.exports = {
 
-    googleapi: null,
+    googleBooksApi: null,
 
     render: null,
 
     barcodeScanner: null,
 
     // Application Constructor
-    initialize: function(googleapi, render, barcodeScanner) {
+    initialize: function(googleBooksApi, render, barcodeScanner) {
         this.bindEvents();
-        this.googleapi = googleapi;
+        this.googleBooksApi = googleBooksApi;
         this.render = render;
         this.barcodeScanner = barcodeScanner;
     },
@@ -18,7 +20,7 @@ module.exports = {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         document.getElementById('search').addEventListener('click', this.search.bind(this), false);
         document.getElementById('scan').addEventListener('click', this.scan.bind(this), false);
-
+        document.getElementById('get-places').addEventListener('click', this.getPlaces.bind(this), false);
     },
 
     onDeviceReady: function() {
@@ -31,11 +33,15 @@ module.exports = {
 
     search: function () {
         var isbn = document.getElementById('isbn').value;
-        this.googleapi.searchByIsbn(isbn, this.render.renderResult);
+        this.googleBooksApi.searchByIsbn(isbn, this.render.renderResult);
     },
 
     scan: function () {
-        this.barcodeScanner.scan(this.googleapi.searchByIsbn, this.render.renderResult);
+        this.barcodeScanner.scan(this.googleBooksApi.searchByIsbn, this.render.renderResult);
+    },
+
+    getPlaces: function () {
+        geolocation.location();
     }
 };
 

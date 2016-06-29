@@ -1,6 +1,6 @@
 var app = require('../modules/app');
-var googleapi = require('../modules/googleApi');
+var googleBooksApi = require('../modules/googleBooksApi');
 var barcodeScanner = require('../modules/barcodeScanner');
 var render = require('../modules/render');
 
-app.initialize(googleapi, render, barcodeScanner);
+app.initialize(googleBooksApi, render, barcodeScanner);
