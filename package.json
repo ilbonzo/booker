@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ilbonzo/booker#readme",
   "dependencies": {
-    "jquery": "^3.0.0"
+    "jquery": "^3.0.0",
+    "localforage": "^1.4.2"
   }
 }

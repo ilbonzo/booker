@@ -1,5 +1,5 @@
 var googlePlaceApi = require('./googlePlaceApi');
-var render = require('./render');
+var myStorage = require('./myStorage');
 
 module.exports = {
 
@@ -19,7 +19,9 @@ module.exports = {
     },
 
     getLocationSuccess: function (result) {
+        myStorage.save(result);
         googlePlaceApi.init(result.coords);
+
     },
 
     getLocationError: function (err) {
