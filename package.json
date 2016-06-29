@@ -18,6 +18,8 @@
   "homepage": "https://github.com/ilbonzo/booker#readme",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.3.0",
     "jquery": "^3.0.0",
     "localforage": "^1.4.2"
   },
