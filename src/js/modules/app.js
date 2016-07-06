@@ -1,4 +1,5 @@
 var geolocation = require('./geolocation');
+var spinner = require('./spinner');
 
 module.exports = {
 
@@ -43,17 +44,29 @@ module.exports = {
 
     search: function (event) {
         event.preventDefault();
+
+        var container = document.getElementById('search-result');
+        spinner.spin(container);
+
         var isbn = document.getElementById('isbn').value;
         this.googleBooksApi.searchByIsbn(isbn, this.render.renderResult);
     },
 
     scan: function (event) {
         event.preventDefault();
+
+        var container = document.getElementById('search-result');
+        spinner.spin(container);
+
         this.barcodeScanner.scan(this.googleBooksApi.searchByIsbn, this.render.renderResult);
     },
 
     getPlaces: function (event) {
         event.preventDefault();
+
+        var container = document.getElementById('map');
+        spinner.spin(container);
+
         geolocation.location();
     }
 };

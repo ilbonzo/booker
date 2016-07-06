@@ -1,3 +1,19 @@
 .app {
     margin-top: 80px;
 }
+
+.content-result {
+    min-height: 100px;
+    position: relative;
+}
+
+.spinner {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+}
+
+.map {
+    height: 300px;
+    min-width: 200px;
+}
