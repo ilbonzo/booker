@@ -1,3 +1,4 @@
+var instantClick = require('instantclick2');
 var geolocation = require('./geolocation');
 var spinner = require('./spinner');
 
@@ -40,6 +41,10 @@ module.exports = {
 
     receivedEvent: function() {
         console.log('Received Event: deviceready');
+        instantClick.init({
+            preloadingMode: 50, //Mouseover duration before preload is triggered
+            preloadCacheTimeLimit: 30000 //How long to cache preloaded pages
+        });
     },
 
     search: function (event) {
