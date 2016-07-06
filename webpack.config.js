@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var entryPath = './src/js/entries/';
@@ -42,6 +43,11 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('style.bundle.css', {
             allChunks: true
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ],
     devtool: 'source-map'
