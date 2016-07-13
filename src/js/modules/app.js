@@ -1,6 +1,7 @@
 var instantClick = require('instantclick2');
 var geolocation = require('./geolocation');
 var spinner = require('./spinner');
+var speechRecognition = require('./speechRecognition');
 
 module.exports = {
 
@@ -33,6 +34,13 @@ module.exports = {
             var button = getPlaceButtons[i];
             button.addEventListener('click', this.getPlaces.bind(this), false);
         }
+
+        var speechButtons = document.querySelectorAll('[data-action="speech"]');
+        for (var i = 0; i < speechButtons.length; i++) {
+            var button = speechButtons[i];
+            button.addEventListener('click', this.speech.bind(this), false);
+        }
+
     },
 
     onDeviceReady: function() {
@@ -73,6 +81,15 @@ module.exports = {
         spinner.spin(container);
 
         geolocation.location();
+    },
+
+    speech: function (event) {
+        event.preventDefault();
+
+        var container = document.getElementById('speech-result');
+        spinner.spin(container);
+
+        speechRecognition.speech();
     }
 };
 
