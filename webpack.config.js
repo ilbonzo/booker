@@ -5,7 +5,8 @@ var entryPath = './src/js/entries/';
 
 module.exports = {
     entry: {
-        index: entryPath + 'index'
+        index: entryPath + 'index',
+        onsen: entryPath + 'onsen'
     },
     output: {
         filename: '[name].bundle.js',

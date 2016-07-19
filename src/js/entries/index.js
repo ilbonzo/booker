@@ -1,3 +1,5 @@
+var onsenuicss = require('onsenui/css/onsenui.css');
+var onsenuicomponents = require('onsenui/css/onsen-css-components.css');
 var bootstrapCss = require('bootstrap/dist/css/bootstrap.css');
 var css = require('../../css/index.css');
 
