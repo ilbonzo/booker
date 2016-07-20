@@ -1,2 +1,2 @@
 #!/bin/bash
-cordova-icon
+./node_modules/cordova-icon/bin/cordova-icon
